@@ -1,9 +1,6 @@
-#%%
 from folium.plugins import FastMarkerCluster
-#import contextily as ctx
 import folium
 import geopandas as gpd
-#import matplotlib.pyplot as plt
 import plotly.express as px
 
 # load gpd
