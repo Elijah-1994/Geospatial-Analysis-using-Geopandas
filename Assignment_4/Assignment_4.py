@@ -1,17 +1,11 @@
 #%%
-import pandas as pd
-import geopandas as gpd
-import geopy
-from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
-import matplotlib.pyplot as plt
-import plotly_express as px
+from geopy.geocoders import Nominatim
 import pandas as pd
-import geopandas as gpd
-import osmnx as ox
-import folium
-import matplotlib.pyplot as plt
-import seaborn as sns
+import plotly_express as px
+
+
+# generate locator
 
 locator = Nominatim(user_agent="myGeocoder")
 address = "Jodenbreestraat 4, Netherlands"
@@ -20,8 +14,14 @@ location
 location.point
 location.latitude
 location.longitude
+
+# load dataframe
+
 df = pd.read_csv("AssignmentData/PPR_Swimming_Pools.csv")
 df.head()
+
+# generate geocode
+
 df["ADDRESS"] = df['ADDRESS_911'] + " Philadelphia, USA"
 geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
 df['location'] = df['ADDRESS'].apply(geocode)
@@ -37,6 +37,3 @@ fig = px.scatter_mapbox(
     zoom=5)
 fig.show()
 
-#OSMN
-# place = "Philadelphia, USA"
-# graph = ox.graph_from_place(place, network_type='drive')
