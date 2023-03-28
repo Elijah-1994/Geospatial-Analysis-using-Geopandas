@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9cf88b68568154a5d0255a1236dcc96e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9cf88b68568154a5d0255a1236dcc96e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9cf88b68568154a5d0255a1236dcc96e = L.map(
+                "map_9cf88b68568154a5d0255a1236dcc96e",
+                {
+                    center: [39.962334, -75.161446],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5e04880a8874366b1424363187fb6e70 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9cf88b68568154a5d0255a1236dcc96e);
+        
+    
+
+        function geo_json_b2f97220ce77190fe39696ce65ed636f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b2f97220ce77190fe39696ce65ed636f = L.geoJson(null, {
+                onEachFeature: geo_json_b2f97220ce77190fe39696ce65ed636f_onEachFeature,
+            
+        });
+
+        function geo_json_b2f97220ce77190fe39696ce65ed636f_add (data) {
+            geo_json_b2f97220ce77190fe39696ce65ed636f
+                .addData(data)
+                .addTo(map_9cf88b68568154a5d0255a1236dcc96e);
+        }
+            geo_json_b2f97220ce77190fe39696ce65ed636f_add({"bbox": [-75.26704248, 39.93847891, -75.01993234, 40.12950708], "features": [{"bbox": [-75.15794770000001, 40.01191378, -75.15794770000001, 40.01191378], "geometry": {"coordinates": [-75.15794770000001, 40.01191378], "type": "Point"}, "id": "45381", "properties": {"dc_dist": 39, "dc_key": 202039000000.0, "dispatch_1": "18/04/2020", "dispatch_d": "18/04/2020 10:28", "dispatch_t": "10:28:00", "hour_": 10, "lat": 40.01191378, "lng": -75.15794770000001, "location_b": "3800 BLOCK N GRATZ ST", "objectid": 3129520, "point_x": -75.15794770000001, "point_y": 40.01191378, "psa": "2", "text_gener": "Thefts", "ucr_genera": 600}, "type": "Feature"}, {"bbox": [-75.21577223, 39.95516775, -75.21577223, 39.95516775], "geometry": {"coordinates": [-75.21577223, 39.95516775], "type": "Point"}, "id": "21259", "properties": {"dc_dist": 18, "dc_key": 202018000000.0, "dispatch_1": "22/01/2020", "dispatch_d": "22/01/2020 22:50", "dispatch_t": "22:50:00", "hour_": 22, "lat": 39.95516775, "lng": -75.21577223, "location_b": "200 BLOCK S 47TH ST", "objectid": 1389037, "point_x": -75.21577223, "point_y": 39.95516775, "psa": "3", "text_gener": "All Other Offenses", "ucr_genera": 2600}, "type": "Feature"}, {"bbox": [-75.23464887, 39.96255963, -75.23464887, 39.96255963], "geometry": {"coordinates": [-75.23464887, 39.96255963], "type": "Point"}, "id": "55006", "properties": {"dc_dist": 19, "dc_key": 202019000000.0, "dispatch_1": "08/05/2020", "dispatch_d": "08/05/2020 17:37", "dispatch_t": "17:37:00", "hour_": 17, "lat": 39.96255963, "lng": -75.23464887, "location_b": "0 BLOCK N 57TH ST", "objectid": 3139462, "point_x": -75.23464887, "point_y": 39.96255963, "psa": "2", "text_gener": "Fraud", "ucr_genera": 1100}, "type": "Feature"}, {"bbox": [-75.17092056, 40.06438739, -75.17092056, 40.06438739], "geometry": {"coordinates": [-75.17092056, 40.06438739], "type": "Point"}, "id": "31176", "properties": {"dc_dist": 14, "dc_key": 202014000000.0, "dispatch_1": "17/03/2020", "dispatch_d": "17/03/2020 00:14", "dispatch_t": "00:14:00", "hour_": 0, "lat": 40.06438739, "lng": -75.17092056, "location_b": "900 BLOCK E HORTTER ST", "objectid": 2153980, "point_x": -75.17092056, "point_y": 40.06438739, "psa": "1", "text_gener": "Other Assaults", "ucr_genera": 800}, "type": "Feature"}, {"bbox": [-75.17955705, 39.93847891, -75.17955705, 39.93847891], "geometry": {"coordinates": [-75.17955705, 39.93847891], "type": "Point"}, "id": "58494", "properties": {"dc_dist": 17, "dc_key": 202017000000.0, "dispatch_1": "26/05/2020", "dispatch_d": "26/05/2020 17:40", "dispatch_t": "17:40:00", "hour_": 17, "lat": 39.93847891, "lng": -75.17955705, "location_b": "2100 BLOCK ELLSWORTH ST", "objectid": 3145044, "point_x": -75.17955705, "point_y": 39.93847891, "psa": "1", "text_gener": "Recovered Stolen Motor Vehicle", "ucr_genera": 700}, "type": "Feature"}, {"bbox": [-75.23081886, 39.97137527, -75.23081886, 39.97137527], "geometry": {"coordinates": [-75.23081886, 39.97137527], "type": "Point"}, "id": "29118", "properties": {"dc_dist": 19, "dc_key": 202019000000.0, "dispatch_1": "30/03/2020", "dispatch_d": "30/03/2020 14:35", "dispatch_t": "14:35:00", "hour_": 14, "lat": 39.97137527, "lng": -75.23081886, "location_b": "1200 BLOCK N 55TH ST", "objectid": 2000107, "point_x": -75.23081886, "point_y": 39.97137527, "psa": "2", "text_gener": "Other Assaults", "ucr_genera": 800}, "type": "Feature"}, {"bbox": [-75.06188418, 40.02829383, -75.06188418, 40.02829383], "geometry": {"coordinates": [-75.06188418, 40.02829383], "type": "Point"}, "id": "14386", "properties": {"dc_dist": 15, "dc_key": 202015000000.0, "dispatch_1": "10/02/2020", "dispatch_d": "10/02/2020 13:10", "dispatch_t": "13:10:00", "hour_": 13, "lat": 40.02829383, "lng": -75.06188418, "location_b": "3000 BLOCK HALE ST", "objectid": 860487, "point_x": -75.06188418, "point_y": 40.02829384, "psa": "2", "text_gener": "Theft from Vehicle", "ucr_genera": 600}, "type": "Feature"}, {"bbox": [-75.26704248, 39.97646385, -75.26704248, 39.97646385], "geometry": {"coordinates": [-75.26704248, 39.97646385], "type": "Point"}, "id": "47676", "properties": {"dc_dist": 19, "dc_key": 202019000000.0, "dispatch_1": "12/05/2020", "dispatch_d": "12/05/2020 22:30", "dispatch_t": "22:30:00", "hour_": 22, "lat": 39.97646385, "lng": -75.26704248, "location_b": "7500 BLOCK BROOKHAVEN RD", "objectid": 3130122, "point_x": -75.26704248, "point_y": 39.97646385, "psa": "1", "text_gener": "Vandalism/Criminal Mischief", "ucr_genera": 1400}, "type": "Feature"}, {"bbox": [-75.14952755, 40.01696507, -75.14952755, 40.01696507], "geometry": {"coordinates": [-75.14952755, 40.01696507], "type": "Point"}, "id": "47603", "properties": {"dc_dist": 25, "dc_key": 202025000000.0, "dispatch_1": "01/06/2020", "dispatch_d": "01/06/2020 22:24", "dispatch_t": "22:24:00", "hour_": 22, "lat": 40.01696507, "lng": -75.14952755, "location_b": "4200 BLOCK N BROAD ST", "objectid": 3128846, "point_x": -75.14952755, "point_y": 40.01696507, "psa": "1", "text_gener": "Burglary Non-Residential", "ucr_genera": 500}, "type": "Feature"}, {"bbox": [-75.01993234, 40.12950708, -75.01993234, 40.12950708], "geometry": {"coordinates": [-75.01993234, 40.12950708], "type": "Point"}, "id": "48074", "properties": {"dc_dist": 7, "dc_key": 202007000000.0, "dispatch_1": "16/04/2020", "dispatch_d": "16/04/2020 15:38", "dispatch_t": "15:38:00", "hour_": 15, "lat": 40.12950708, "lng": -75.01993234, "location_b": "13300 BLOCK PHILMONT AVE", "objectid": 3130567, "point_x": -75.01993234, "point_y": 40.12950708, "psa": "3", "text_gener": "Fraud", "ucr_genera": 1100}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+</script>
+</html>
