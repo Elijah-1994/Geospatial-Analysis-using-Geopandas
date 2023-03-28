@@ -31,20 +31,15 @@ folium.LayerControl().add_to(cmap)
 cmap
 
 
+# plot scatterplot
+fig = px.scatter_mapbox(
+    incidents_gpd,   
+    lat="lat", 
+    lon="lng", 
+    mapbox_style="carto-darkmatter",
+    zoom=10)
+fig.show()
 
 
 
 
-
-
-
-
-
-# px.scatter_geo(incidents, lat="latitude", lon="longitude")
-# fig = px.scatter_mapbox(
-#     incidents,   
-#     lat="lat", 
-#     lon="lng", 
-#     mapbox_style="carto-darkmatter",
-#     zoom=1)
-# fig.show()
