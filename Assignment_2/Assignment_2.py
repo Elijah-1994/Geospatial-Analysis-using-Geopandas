@@ -1,6 +1,7 @@
+import contextily as ctx
 import geopandas as gpd
 import matplotlib.pyplot as plt
-import contextily as ctx
+
 
 def load_shp_files(shapefile):
     geo_data_frames = []
